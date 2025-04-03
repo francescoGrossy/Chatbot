@@ -6,9 +6,6 @@ from langchain_openai import OpenAIEmbeddings
 from langchain.schema import Document
 from dotenv import load_dotenv
 
-# Carica variabili d'ambiente
-load_dotenv()
-
 CHROMA_PATH = "chroma"
 DATA_PATH = "data\\books\\faq_autoscuola.json"
 
