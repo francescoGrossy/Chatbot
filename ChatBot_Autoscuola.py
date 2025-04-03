@@ -45,18 +45,18 @@ def query_chroma(query_text, db):
 def main():
     # Crea il database solo se non esiste
     if not os.path.exists(CHROMA_PATH):
-        print("📂 Creazione del database Chroma...")
+        print("Creazione del database Chroma...")
         create_db.main()
 
     # Carica il database Chroma
-    print("🔍 Caricamento del database Chroma completato.")
+    print("Caricamento del database Chroma completato.")
     embedding_function = OpenAIEmbeddings()
     db = Chroma(persist_directory=CHROMA_PATH, embedding_function=embedding_function)
 
     # Avvia il chatbot in un loop
-    print("\n🤖 Chatbot avviato! Digita 'exit' per uscire.")
+    print("\n Chatbot avviato! Digita 'exit' per uscire.")
     while True:
-        query_text = input("📢 Fai una domanda sull'autoscuola: ")
+        query_text = input("Fai una domanda sull'autoscuola: ")
         if query_text.lower() == "exit":
             print("👋 Arrivederci!")
             break
