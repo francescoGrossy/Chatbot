@@ -5,8 +5,7 @@ from dotenv import load_dotenv
 import os
 import create_db
 
-# Carica API Key da .env
-load_dotenv()
+# Load you API key. I had it in my env variables.
 
 CHROMA_PATH = "chroma"
 
